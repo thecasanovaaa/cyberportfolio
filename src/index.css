@@ -16,11 +16,25 @@ body {
   font-family: 'Fira Code', monospace;
 }
 
+/* Mobile: hide canvas side and adjust terminal font size */
 @media (max-width: 768px) {
-.canvascode {
+  /* completely hide the Canvas column */
+  .canvascode {
     display: none !important;
   }
-  .terminalcode{
+
+  /* make the terminal take full width */
+  .terminalcode {
     width: 100% !important;
   }
+
+  /* tighten typography for the terminal on mobile */
+  .terminalcode p,
+  .terminalcode span,
+  .terminalcode div,
+  .terminalcode input {
+    font-size: 0.95rem !important;   /* tweak as you like */
+    line-height: 1.4 !important;
+  }
 }
+
